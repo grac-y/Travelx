@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=DynaPuff&family=Roboto:ital,wght@0,400;0,700;1,300;1,400&display=swap');
+
+section {
+    padding: 5rem 9%;
+}
+
+section .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    border: .2rem solid #10221b;
+    cursor: pointer;
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+}
+
+section button:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* -------------------Home Section------------------  */
+
+.home {
+    padding: 0;
+}
+
+.home .box {
+    min-height: 106vh;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content: flex-end;
+    padding: 2rem 9%;
+}
+
+.home .box .content {
+    width: 45rem;
+}
+
+.home .box .content span {
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.home .box .content h3 {
+    font-family: 'DynaPuff', cursive;
+    font-size: 4rem;
+    color: var(--green);
+    padding-top: .5rem;
+    text-transform: uppercase;
+}
+
+.home .box .content p {
+    line-height: 2;
+    color: var(--black);
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+/* ------------------------------------------------------------  */
+
+/* ---------------------Container --------------------------------  */
+.container {
+    width: 86%;
+    margin: 0 auto;
+}
+
+.container .category,
+.container .india,
+.container .international {
+    width: 100%;
+    float: left;
+    padding: 40px 0 40px 0;
+}
+
+.container .heading_container {
+    padding-bottom: 24px;
+    position: relative;
+    clear: left;
+    float: left;
+    width: 100%;
+}
+
+.container .heading_container h2 {
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: #38404f;
+    float: left;
+}
+
+.container .themes {
+    clear: left;
+}
+
+.container .themes ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container .themes ul li {
+    width: 100%;
+    padding: 0 12px;
+    margin: 0;
+}
+
+.container .category .themes ul li .explore_theme_icone {
+    border: 1px solid #e7e7e7;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.container .category .themes ul li .explore_theme_icone figure {
+    height: 50px;
+    width: 84px;
+    margin: 0 auto;
+    position: relative;
+    transition: all .2s;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.container .category .themes ul li .explore_theme_icone figure img {
+    height: 50px;
+    width: auto;
+    position: relative;
+    transition: all .5s;
+    top: 0;
+}
+
+.container .category .themes ul li .explore_theme_icone h3 {
+    text-align: center;
+}
+
+.container .category .themes ul li .explore_theme_icone h3 a {
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #62637c;
+    text-decoration: none;
+}
+
+.container .category .themes ul li .explore_theme_icone :hover img {
+    transform: scale(1.1);
+}
+
+.container .india .themes ul li .city {
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 0 22px 2px rgb(0 0 0 / 11%);
+    height: 229px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.container .india .themes ul li .city .city_image {
+    height: 81%;
+    width: 100%;
+}
+
+.container .india .themes ul li .city .city_image img {
+    width: 100%;
+    top: 0;
+    height: 100%;
+}
+
+.container .india .themes ul li .city .city_name {
+    padding: 15px;
+}
+
+.container .india .themes ul li .city .city_name h3 {
+    text-align: left;
+}
+
+.container .india .themes ul li .city .city_name h3 a {
+    font-size: 19px;
+    line-height: 18px;
+    color: #62637c;
+    text-decoration: none;
+}
+
+.container .india .themes ul li .city .city_name h3 a:hover {
+    color: var(--green);
+}
+
+/* -----------------------------------------------------------------  */
+
+/* -------------------------About Section --------------------------  */
+.about_section {
+    padding: 100px 0 80px 0;
+    float: left;
+    width: 100%;
+    position: relative;
+    height: 467px;
+    overflow: hidden;
+}
+
+.about_section #about_video {
+    position: absolute;
+    top: 27px;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: -100;
+}
+
+.about_section .content {
+    width: 100%;
+    height: 94%;
+    top: 27px;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(68, 72, 68, 0.3)
+}
+
+.about_section .about_detail {
+    position: absolute;
+    width: 48%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_section .about_detail h2 {
+    font-size: 90px;
+    padding-bottom: 13px;
+    color: var(--white);
+}
+
+.about_section .about_detail p {
+    font-size: 17px;
+    line-height: 25px;
+    color: var(--white);
+}
+
+/* -----------------------------------------------------------  */
+
+
+/* ----------------Why choose us-------------------------------  */
+.why_choose_outer {
+    padding: 100px 0 80px 0;
+    float: left;
+    width: 100%;
+    background: #f0f0f1;
+    ;
+}
+
+.why_choose_outer .inner {
+    padding: 0 21px;
+    margin: 0 134px;
+}
+
+.why_choose_outer .inner .heading h3 {
+    font-size: 44px;
+    line-height: 42px;
+    padding-bottom: 10px;
+    color: var(--black);
+}
+
+.why_choose_outer .inner .para p {
+    font-size: 16px;
+    color: var(--green);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.why_choose_outer .inner .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.why_choose_outer .inner .content .expert {
+    margin-right: 25px;
+}
+
+.why_choose_outer .inner .content .expert .icon {
+    float: left;
+    font-size: 32px;
+    color: var(--green);
+}
+
+.why_choose_outer .inner .content .expert .detail {
+    padding-left: 60px;
+    width: 93%;
+}
+
+.why_choose_outer .inner .content .expert .detail h4 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #38404f;
+}
+
+.why_choose_outer .inner .content .expert .detail p {
+    font-size: 15px;
+    color: #3e3e3e;
+    line-height: 23px;
+}
+
+/* -----------------------------------------------------------------  */
+
+/* --------------------Client Feedback--------------------------------  */
+
+.outer_wrapper {
+    padding: 0 0 80px 0;
+    float: left;
+    width: 100%;
+}
+
+.outer_wrapper .container {
+    padding: 0 21px;
+    margin: 0 121px;
+}
+
+.outer_wrapper .container .client_review {
+    clear: both;
+    padding-top: 38px;
+}
+
+.outer_wrapper .container .client_review h1 {
+    position: relative;
+    text-align: center;
+    color: #394048;
+    font-size: 41px;
+    line-height: 41px;
+}
+
+.outer_wrapper .container .client_review h1 span {
+    color: var(--green);
+}
+
+.outer_wrapper .container .client_review p {
+    color: #4a5258;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 55px 0;
+    text-align: center;
+}
+
+.outer_wrapper .container .client_feedback {
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 25px;
+}
+
+.outer_wrapper .container .client_feedback .text {
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    border-radius: .5rem;
+    color: var(--black);
+    background: #dadde0;
+    line-height: 2;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 3rem;
+}
+
+.outer_wrapper .container .client_feedback .text::before {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    left: .7rem;
+    height: 3rem;
+    width: 3rem;
+    background: #dadde0;
+    transform: rotate(45deg);
+}
+
+.outer_wrapper .container .client_feedback .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.outer_wrapper .container .client_feedback .user img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.outer_wrapper .container .client_feedback .user .info h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.outer_wrapper .container .client_feedback .user .info span {
+    color: var(--green);
+    font-size: 1.5rem;
+}
+
+/* ---------------------------------------------------------------  */
+
+
+/* ------------------------------Media Queries----------------------------------  */
+@media(max-width:1200px) {
+    section {
+        padding: 3rem 2rem;
+    }
+
+    .container .themes ul {
+        margin: -31px;
+    }
+
+    .outer_wrapper .container {
+        padding: 0 15px;
+        margin: 0 80px;
+    }
+
+    .about_section .about_detail h2 {
+        font-size: 70px;
+    }
+
+    .about_section .about_detail p {
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width:991px) {
+    .home .box {
+        padding: 2rem;
+        justify-content: center;
+        background-position: right !important;
+    }
+
+    .home .content {
+        text-align: center;
+    }
+
+    .home .content span {
+        font-size: 3rem;
+    }
+
+    .home .content h3 {
+        font-size: 4rem;
+    }
+
+    .container .themes ul {
+        flex-wrap: wrap;
+    }
+
+    .container .themes ul li {
+        width: 33%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        padding: 0 5px;
+    }
+
+    .about_section {
+        padding: 47px 0 8px 0;
+    }
+
+    .about_section .about_detail {
+        width: 63%;
+    }
+
+    .why_choose_outer {
+        padding: 51px 0 47px 0;
+    }
+
+    .why_choose_outer .inner .content {
+        flex-wrap: wrap;
+    }
+
+    .why_choose_outer .inner {
+        padding: 0 15px;
+        margin: 0 37px;
+    }
+
+    .why_choose_outer .inner .content .expert {
+        margin-right: 0;
+        margin-top: 8px;
+    }
+
+    .outer_wrapper {
+        padding: 0 0 60px 0;
+    }
+
+    .outer_wrapper .container {
+        padding: 0 15px;
+        margin: 0 70px;
+    }
+}
+
+@media(max-width:768px) {
+    .container .india .themes ul li .city .city_name h3 a {
+        font-size: 18px;
+        line-height: 15px;
+    }
+
+    .container .india .themes ul li .city {
+        height: 200px;
+    }
+
+    .about_section .about_detail {
+        width: 80%;
+    }
+
+    .about_section .about_detail h2 {
+        font-size: 65px;
+    }
+
+    .about_section .about_detail p {
+        font-size: 14px;
+    }
+
+    .why_choose_outer {
+        padding: 51px 0 12px 0;
+    }
+
+    .why_choose_outer .inner {
+        padding: 0 15px;
+        margin: 0 37px;
+    }
+
+    .why_choose_outer .inner .heading h3 {
+        font-size: 38px;
+    }
+
+    .outer_wrapper .container {
+        padding: 0 15px;
+        margin: 0 50px;
+    }
+
+    .outer_wrapper .container .client_review h1 {
+        font-size: 31px;
+        line-height: 31px;
+    }
+
+    .outer_wrapper .container .client_review p {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 33px 0;
+    }
+
+}
+
+@media(max-width:450px) {
+    .container .themes ul li {
+        width: 49%;
+        margin-bottom: 10px;
+        margin-right: 0;
+        padding: 0 5px;
+    }
+
+    .container .india .themes ul li .city .city_name h3 a {
+        font-size: 18px;
+        line-height: 15px;
+    }
+
+    .container .india .themes ul li .city {
+        height: 200px;
+    }
+
+    .about_section .about_detail h2 {
+        font-size: 55px;
+    }
+
+    .about_section .about_detail p {
+        /* font-size: 14px; */
+        line-height: 20px;
+    }
+
+    .why_choose_outer .inner {
+        padding: 0 0;
+        margin: 0 18px;
+    }
+
+    .why_choose_outer .inner .heading h3 {
+        font-size: 32px;
+    }
+
+    .outer_wrapper .container {
+        padding: 0 0;
+        margin: 0 30px;
+    }
+}
+
+/* ------------------------------------------------------------------------------  */

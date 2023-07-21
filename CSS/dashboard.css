@@ -1,0 +1,167 @@
+#search_btn button {
+    display: none;
+}
+
+.main_section {
+    position: relative;
+    width: 100%;
+    top: 83px;
+}
+
+.profile {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    float: left;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    min-height: 66rem;
+}
+
+.profile .title {
+    flex-basis: 49px;
+}
+
+.profile .title h1 {
+    float: left;
+    padding: 0 130px;
+    font-size: 30px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.profile .title h1 span {
+    font-weight: 700;
+}
+
+.profile .book_card {
+    flex-basis: 61px;
+}
+
+.profile .book_card h3 {
+    margin: 20px 0 0 0;
+    padding: 15px 135px 0px 135px;
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+
+}
+
+tbody #cancel_btn {
+    margin: 5px;
+    font-size: 49px;
+    color: var(--green);
+    background: none;
+}
+
+tbody #cancel_btn:hover {
+    color: rgb(202, 27, 27);
+    cursor: pointer;
+}
+
+.profile .booked_trips_table {
+    flex-basis: 46rem;
+    top: 0;
+}
+
+.profile .booked_trips_table table tbody tr {
+    display: flex;
+}
+
+.dashboard_footer {
+    position: relative;
+    background: #3e433e;
+    flex-basis: 97px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: #f3f3f3;
+}
+
+.dashboard_footer .links {
+    display: flex;
+    justify-content: space-between;
+    color: #f3f3f3;
+    width: 60%;
+}
+
+.dashboard_footer .links a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 5px 10px;
+    line-height: 19px;
+
+}
+
+.dashboard_footer .links a:hover {
+    color: #8ad88a;
+}
+
+.dashboard_footer .copyright {
+    margin: 5px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+@media(max-width:991px) {
+    .profile .title h1 {
+        padding: 0 68px;
+    }
+
+    .profile .book_card h3 {
+        padding: 15px 67px 0px 67px;
+    }
+
+    tbody #cancel_btn {
+        font-size: 41px;
+    }
+
+    .dashboard_footer .links {
+        width: 66%;
+    }
+}
+
+@media(max-width:668px) {
+    .profile .title h1 {
+        padding: 0 54px;
+        font-size: 27px;
+    }
+
+    .profile .book_card h3 {
+        padding: 0px 58px 0px 57px;
+    }
+
+    tbody #cancel_btn {
+        font-size: 31px;
+    }
+
+    .dashboard_footer .links {
+        width: 80%;
+    }
+}
+
+@media(max-width:444px) {
+    .profile .booked_trips_table table tbody tr {
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    .profile .booked_trips_table table tbody tr td .tour_card_row {
+        margin-bottom: 0;
+    }
+
+    .tour_card_row .content_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

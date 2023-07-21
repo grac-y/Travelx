@@ -1,0 +1,608 @@
+body {
+    background: rgb(229, 238, 229);
+}
+
+.inner_banner {
+    position: relative;
+    width: 100%;
+    top: 83px;
+    padding: 15px 109px;
+    float: left;
+}
+
+.inner_banner .breadcrumb {
+    width: 100%;
+    float: left;
+}
+
+.inner_banner .breadcrumb ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inner_banner .breadcrumb ul li {
+    float: left;
+    margin-right: 3px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.inner_banner .breadcrumb ul li a {
+    color: var(--black);
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+}
+
+.inner_banner .breadcrumb ul li.active a {
+    color: var(--green);
+}
+
+.inner_banner .introduction {
+    display: inline;
+}
+
+.inner_banner .intro {
+    width: 726px;
+    float: left;
+}
+
+.inner_banner .intro h1 {
+    color: var(--black);
+    font-size: 46px;
+    line-height: 54px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+.inner_banner .intro h1 span {
+    color: var(--green);
+}
+
+.inner_banner .intro p {
+    color: var(--black);
+    font-size: 15px;
+    line-height: 32px;
+    padding-bottom: 25px;
+}
+
+.inner_banner .introduction .banner_image {
+    position: absolute;
+    left: 57%;
+    height: 100%;
+    width: 42%;
+    clip-path: circle(49.3% at 50% 25%);
+    background-size: 100% 100%;
+    top: 0px;
+}
+
+
+.tour_card_container {
+    position: relative;
+    width: 70%;
+    top: 183px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    left: 15%;
+    padding: 5px;
+}
+
+.tour_card_container .tour_card_row {
+    width: 99%;
+    display: flex;
+    padding: 15px 15px;
+    margin: 0px auto 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
+    border-radius: 2px;
+}
+
+.tour_card_container .tour_card_row .image_container {
+    width: 30%;
+    float: left;
+    position: relative;
+}
+
+.tour_card_container .tour_card_row .image_container img {
+    width: 100%;
+    height: 100%;
+}
+
+.tour_card_container .tour_card_row .content_container {
+    width: 70%;
+    float: right;
+    padding: 10px 10px 10px 28px;
+}
+
+.tour_card_container .tour_card_row .content_container .button_container {
+    float: right;
+    margin-top: 22px;
+    margin-left: 23px;
+    font-size: 23px;
+    padding: 5px;
+    width: 148px;
+    text-align: center;
+    border-radius: 0px;
+    background-color: rgb(13, 148, 139);
+}
+
+.tour_card_container .tour_card_row .content_container .button_container a {
+    color: white;
+}
+
+.tour_card_container .tour_card_row .content_container .amount {
+    display: flex;
+    float: left;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.tour_card_container .tour_card_row .content_container .amount .rent {
+    font-size: 29px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.tour_card_container .tour_card_row .content_container .amount .rent_unit {
+    color: rgb(111, 111, 111);
+    font-size: 17px;
+}
+
+.tour_card_container .tour_card_row .content_container h1 {
+    font-size: 32px;
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+
+.tour_card_container .tour_card_row .content_container span {
+    font-size: 15px;
+    line-height: 14px;
+    color: var(--green);
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+.tour_card_container .tour_card_row .content_container h2 {
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin-top: 16px;
+    border-top: 2px solid #e7e7e7;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.tour_card_container .tour_card_row .content_container ul {
+    display: flex;
+    align-items: baseline;
+    list-style: none;
+}
+
+.tour_card_container .tour_card_row .content_container ul li {
+    text-align: center;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 500;
+    margin-right: 30px;
+    color: green;
+}
+
+#book-form {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1111111;
+    overflow: auto;
+}
+
+#book-form .book_close {
+    position: relative;
+    padding-right: 63px;
+    padding-bottom: 19px;
+    width: 100%;
+}
+
+#book-form .book_close:hover {
+    cursor: pointer;
+}
+
+#book-form .book_close span {
+    font-size: 27px;
+    float: right;
+    color: #696f68;
+}
+
+#book-form .book_close span:hover {
+    color: var(--green);
+}
+
+#book-form .book_close span i {
+    border-radius: 50%;
+    font-size: 45px;
+    background-color: #fff;
+}
+
+#book-form .enquiry_container {
+    display: block;
+    width: 42%;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#book-form .enquiry_container i {
+    margin: 0 auto 10px auto;
+    display: block;
+    width: 131px;
+    text-align: center;
+    color: var(--green);
+    font-size: 69px;
+}
+
+#book-form .enquiry_container h2 {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #1f1c30;
+}
+
+#book-form .enquiry_container .enquiry_form {
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#book-form .enquiry_container .enquiry_form .form_group {
+    width: 100%;
+    margin-bottom: 8px;
+    position: relative;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#book-form .enquiry_container .enquiry_form .form_group .form_half {
+    width: 48%;
+    float: left;
+    position: relative;
+}
+
+#book-form .enquiry_container .enquiry_form .form_group label {
+    width: 100%;
+    margin-bottom: 5px;
+    float: left;
+    color: #585c66;
+    font-size: 14px;
+    line-height: 25px;
+    display: block;
+    text-align: left;
+}
+
+#book-form .enquiry_container .enquiry_form .form_group input {
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    font-size: 15px;
+    line-height: 32px;
+    color: #585c66;
+    height: 32px;
+    padding: 0 15px;
+    border-radius: 0;
+}
+
+#book-form .enquiry_container .enquiry_form .form_group button {
+    background: #1a9457;
+    width: 100%;
+    height: 37px;
+    border: 0;
+    font-size: 17px;
+    line-height: 37px;
+    color: #fff;
+    text-align: center;
+}
+
+#book-form .enquiry_container .enquiry_form .form_group button:hover {
+    cursor: pointer;
+    background: #18b466;
+}
+
+.footer {
+    position: relative;
+    top: 213px;
+}
+
+
+
+
+@media(max-width:1340px) {
+    .inner_banner {
+        padding: 15px 65px;
+    }
+
+    .inner_banner .introduction .banner_image {
+        left: 58%;
+        width: 42%;
+    }
+
+    .inner_banner .intro {
+        width: 690px;
+    }
+}
+
+@media(max-width:1200px) {
+    .inner_banner .intro h1 {
+        padding-top: 24px;
+        padding-bottom: 19px;
+    }
+
+    .inner_banner .intro {
+        width: 593px;
+    }
+
+    .inner_banner {
+        padding: 15px 49px;
+    }
+
+    .inner_banner .intro h1 {
+        font-size: 45px;
+        line-height: 43px;
+    }
+
+    .tour_card_container {
+        top: 140px;
+        left: 14%;
+        width: 75%;
+    }
+
+    #book-form .enquiry_container {
+        width: 51%;
+    }
+}
+
+@media(max-width:1055px) {
+    .tour_card_container {
+        left: 6%;
+        width: 89%;
+    }
+
+    .tour_card_container .tour_card_row .content_container h1 {
+        font-size: 30px;
+    }
+
+    .tour_card_container .tour_card_row .content_container h2 {
+        margin-top: 14px;
+        font-size: 21px;
+    }
+
+    .tour_card_container .tour_card_row .content_container ul li {
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+    .tour_card_container .tour_card_row .content_container .amount .rent {
+        font-size: 27px;
+    }
+
+    .tour_card_container .tour_card_row .content_container .amount .rent_unit {
+        font-size: 14px;
+    }
+
+    .tour_card_container .tour_card_row .content_container .button_container {
+        margin-top: 19px;
+        margin-left: 14px;
+        font-size: 22px;
+    }
+}
+
+@media(max-width:1028px) {
+    .inner_banner .intro p {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .inner_banner .intro h1 {
+        font-size: 43px;
+        line-height: 40px;
+    }
+
+    .inner_banner {
+        padding: 15px 39px;
+    }
+
+    .inner_banner .introduction .banner_image {
+        left: 60%;
+        width: 40%;
+    }
+
+    .inner_banner .intro {
+        width: 578px;
+    }
+}
+
+@media(max-width:991px) {
+    .inner_banner .intro h1 {
+        padding-top: 14px;
+        padding-bottom: 16px;
+        font-size: 41px;
+        line-height: 30px;
+    }
+
+    .inner_banner .introduction .banner_image {
+        height: 85%;
+        left: 63%;
+        width: 38%;
+    }
+
+    .inner_banner {
+        padding: 15px 28px;
+    }
+
+    .tour_card_container {
+        top: 127px;
+    }
+
+    #book-form .enquiry_container {
+        width: 60%;
+    }
+}
+
+@media(max-width:897px) {
+    .inner_banner .introduction .banner_image {
+        display: none;
+    }
+
+    .inner_banner {
+        padding: 15px 0;
+    }
+
+    .inner_banner .breadcrumb {
+        padding: 0 48px;
+    }
+
+    .inner_banner .intro {
+        padding: 0 48px;
+        width: 89%;
+    }
+
+    .inner_banner .intro h1 {
+        font-size: 44px;
+        line-height: 36px;
+    }
+
+    .inner_banner .intro p {
+        font-size: 15px;
+        line-height: 31px;
+    }
+
+    .tour_card_container .tour_card_row .content_container h1 {
+        font-size: 28px;
+    }
+
+    .tour_card_container .tour_card_row .content_container span {
+        font-size: 13px;
+    }
+
+    .tour_card_container .tour_card_row .content_container h2 {
+        margin-top: 12px;
+        font-size: 19px;
+    }
+
+    .tour_card_container .tour_card_row .content_container ul li {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .tour_card_container .tour_card_row .content_container .amount .rent {
+        font-size: 25px;
+    }
+
+    .tour_card_container .tour_card_row .content_container .amount .rent_unit {
+        font-size: 12px;
+    }
+
+    .tour_card_container .tour_card_row .content_container .button_container {
+        margin-top: 15px;
+        margin-left: 15px;
+        font-size: 21px;
+    }
+}
+
+@media(max-width:750px) {
+    .inner_banner .intro {
+        width: 98%;
+    }
+
+    .inner_banner .intro h1 {
+        font-size: 42px;
+        line-height: 35px;
+    }
+
+    .inner_banner .intro p {
+        font-size: 14px;
+    }
+
+    .tour_card_container {
+        left: 3%;
+        width: 93%;
+    }
+
+    .tour_card_container .tour_card_row .content_container h1 {
+        font-size: 25px;
+    }
+
+    .tour_card_container .tour_card_row .content_container span {
+        font-size: 12px;
+    }
+
+    .tour_card_container .tour_card_row .content_container h2 {
+        margin-top: 7px;
+        font-size: 16px;
+    }
+
+    .tour_card_container .tour_card_row .content_container ul li {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .tour_card_container .tour_card_row .content_container .amount .rent {
+        font-size: 21px;
+    }
+
+    .tour_card_container .tour_card_row .content_container .amount .rent_unit {
+        font-size: 12px;
+    }
+
+    .tour_card_container .tour_card_row .content_container .button_container {
+        margin-top: 12px;
+        font-size: 18px;
+        width: 139px;
+    }
+
+    .tour_card_container .tour_card_row {
+        padding: 11px 11px;
+    }
+
+    .tour_card_container .tour_card_row .content_container {
+        padding: 10px 10px 10px 19px;
+    }
+
+    #book-form .enquiry_container {
+        width: 78%;
+    }
+}
+
+@media(max-width:600px) {
+    .inner_banner .intro {
+        padding: 0 33px;
+        width: 100%;
+    }
+
+    .inner_banner .breadcrumb {
+        padding: 0 33px;
+    }
+
+    .inner_banner .intro h1 {
+        font-size: 40px;
+    }
+
+    .tour_card_container .tour_card_row .image_container {
+        display: none;
+    }
+
+    .tour_card_container .tour_card_row .content_container {
+        width: 99%;
+        padding: 10px;
+    }
+}

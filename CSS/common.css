@@ -1,0 +1,896 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=DynaPuff&family=Roboto:ital,wght@0,400;0,700;1,300;1,400&display=swap');
+
+:root {
+    --green: #219150;
+    --black: #10221b;
+    --white: #fff;
+    --light-black: #666;
+    --light-bg: #eee;
+    --border: .2rem solid #eee;
+    --box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--black);
+}
+
+/* ----------------Navbar-------------------  */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.header_bgcolor {
+    background: var(--white);
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.header .logo {
+    font-family: 'Bree Serif', serif;
+    margin-right: auto;
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.header .logo i {
+    color: var(--green);
+}
+
+.header .navbar a {
+    font-family: 'Bree Serif', serif;
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.header .navbar a:hover {
+    color: var(--green);
+}
+
+.header .navbar #login_btn {
+    font-family: 'Bree Serif', serif;
+    margin-left: 3rem;
+    padding: 6px 24px;
+    font-weight: 600;
+    color: var(--green);
+}
+
+.header .navbar #login_btn:hover {
+    border: 2px solid var(--green);
+    border-radius: 4px;
+}
+
+.header .icons #menu_btn,
+.header .icons #login_user {
+    font-size: 2.5rem;
+    margin-left: 4rem;
+    cursor: pointer;
+    color: #10221b;
+}
+
+.header .icons #menu_btn:hover,
+.header .icons #login_user:hover {
+    color: #219150;
+}
+
+.header .icons #menu_btn {
+    display: none;
+}
+
+.header .icons .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.header .icons .dropdown .dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: -54px;
+    margin-right: 2rem;
+}
+
+.header .icons .dropdown .dropdown_content p {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    font-size: 13px;
+    margin-left: 0;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header .icons .dropdown .dropdown_content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    margin-left: 0;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header .icons .dropdown .dropdown_content button:hover {
+    background-color: #ddd;
+    width: 100%;
+}
+
+.header .icons .dropdown:hover .dropdown_content {
+    display: block;
+}
+
+/* -----------------------------------------------------  */
+
+
+
+/* --------------------SignUp and login form ------------------  */
+#signup,
+#login_model {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1111111;
+    overflow: auto;
+}
+
+#signup .signup_form,
+#login_model .login_form {
+    display: block;
+    width: 25%;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+#signup .signup_form .signup_close,
+#login_model .login_form .login_close {
+    border-bottom: 0.2rem solid rgb(206, 203, 203);
+    padding: 20px 20px 3px 20px;
+}
+
+#signup .signup_form .signup_close span,
+#login_model .login_form .login_close span {
+    float: right;
+    cursor: pointer;
+    padding: 3px;
+}
+
+#signup .signup_form .signup_close span:hover,
+#login_model .login_form .login_close span:hover {
+    color: var(--green);
+}
+
+#signup .signup_form .main_form,
+#login_model .login_form .main_form {
+    padding: 4px 20px;
+    font-size: 16px;
+}
+
+#signup .signup_form .main_form input[type=text],
+#signup .signup_form .main_form input[type=email],
+#signup .signup_form .main_form input[type=password],
+#login_model .login_form .main_form input[type=email],
+#login_model .login_form .main_form input[type=password] {
+    border-bottom: 1px solid rgb(204, 199, 199);
+    padding: 4px 7px;
+    width: 100%;
+    font-size: 16px;
+    margin: 9px 0;
+    background-color: #f2f2f2;
+}
+
+#signup .signup_form .main_form input[type=email],
+#signup .signup_form .main_form input[type=password],
+#login_model .login_form .main_form input[type=email],
+#login_model .login_form .main_form input[type=password] {
+    text-transform: lowercase;
+}
+
+#signup .signup_form .main_form input[type=radio] {
+    padding: 4px 7px;
+    margin: 9px 4px;
+    background-color: #f2f2f2;
+}
+
+#signup .signup_form .main_form input[type=submit],
+#login_model .login_form .main_form input[type=submit] {
+    margin: 9px 0;
+    width: 100%;
+    padding: 4px 0;
+    text-align: center;
+    font-size: 16px;
+    background-color: #23c1a1;
+    color: white;
+}
+
+#signup .signup_form .main_form input[type=submit]:hover,
+#login_model .login_form .main_form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: #1ab092;
+}
+
+#login_model .login_form .login {
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 16px;
+    background-color: #e2e0e0;
+}
+
+#login_model .login_form .login h4 {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#login_model .login_form .login span button {
+    background-color: #e2e0e0;
+    color: #23c1a1;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#login_model .login_form .login span button:hover {
+    color: #1ab092;
+    cursor: pointer;
+}
+
+/* -----------------------------------------------------------  */
+
+/* ----------------Plan your trip button------------------  */
+
+#search_btn button {
+    font-family: 'Bree Serif', serif;
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    background: #219150;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-left: 2rem;
+    border: 3px solid #219150;
+    padding: 5px 25px;
+    border-radius: 50px;
+    z-index: 1000;
+}
+
+#search_btn button:hover {
+    background: #1da756;
+    border: 3px solid #1da756;
+}
+
+/* --------------------------------------------------------------  */
+
+
+/* ---------------------------Plan you Trip Form---------------------------  */
+
+#plan_trip {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1111111;
+    overflow: auto;
+}
+
+#plan_trip .main_form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+    left: 25%;
+    top: 10px;
+    width: 60%;
+    height: 90%;
+}
+
+#plan_trip .close {
+    color: white;
+    text-align: right;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 23px;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+}
+
+#plan_trip .close:hover {
+    color: var(--green);
+}
+
+#plan_trip .form {
+    position: relative;
+    top: 7px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#plan_trip .form .form_left {
+    float: left;
+    width: 45%;
+}
+
+#plan_trip .form .form_left h3 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #494f5d;
+}
+
+#plan_trip .form .form_left .list {
+    float: left;
+    width: 100%;
+    padding: 32px 0;
+}
+
+#plan_trip .form .form_left .list li {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #70747d;
+    margin-bottom: 23px;
+    position: relative;
+    padding-left: 13px;
+    padding-right: 5px;
+}
+
+#plan_trip .form .form_left .list li::after {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    left: 0;
+    top: 8px;
+}
+
+#plan_trip .form .form_left .social_icon {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 33px;
+    padding-right: 5px;
+}
+
+#plan_trip .form .form_left .social_icon ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+#plan_trip .form .form_left .social_icon ul li a {
+    text-decoration: none;
+}
+
+#plan_trip .form .form_left .social_icon ul li a i {
+    font-size: 52px;
+    color: var(--green);
+    margin-right: 18px;
+}
+
+#plan_trip .form .form_left .call_section {
+    float: left;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgb(178, 178, 178);
+    padding-top: 22px;
+    padding-right: 5px;
+}
+
+#plan_trip .form .form_left .call_section p {
+    font-size: 19px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #70747d;
+}
+
+#plan_trip .form .form_left .call_section p i {
+    color: var(--green);
+}
+
+#plan_trip .form .form_left .call_section h4 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    color: var(--green);
+    padding: 9px 0;
+}
+
+#plan_trip .form .form_left .call_section h4 a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+#plan_trip .form .form_right {
+    float: right;
+    width: 50%;
+    padding-left: 25px;
+    height: 100%;
+}
+
+#plan_trip .form .form_right h2 {
+    display: block;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #494f5d;
+    text-align: center;
+    letter-spacing: -1px;
+    position: relative;
+}
+
+#plan_trip .form .form_right h2 span {
+    color: var(--green);
+}
+
+#plan_trip .form .form_right form {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin-top: 32px;
+}
+
+#plan_trip .form .form_right form .full {
+    width: 100%;
+    float: left;
+}
+
+#plan_trip .form .form_right form .full .half {
+    width: 48%;
+    float: left;
+}
+
+#plan_trip .form .form_right form .full .half:last-child {
+    margin-left: 4%;
+}
+
+#plan_trip .form .form_right form .full label {
+    display: block;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #70747d;
+    text-align: left;
+}
+
+#plan_trip .form .form_right form .full label span {
+    color: var(--green);
+}
+
+#plan_trip .form .form_right form .full input[type=text],
+#plan_trip .form .form_right form .full select,
+#plan_trip .form .form_right form .full input[type=email],
+#plan_trip .form .form_right form .full input[type=date] {
+    width: 100%;
+    padding: 7px;
+    margin: 8px 0;
+    display: inline-block !important;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #58595e;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+}
+
+#plan_trip .form .form_right form .full textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #dde0e2;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #58595e;
+    box-sizing: border-box;
+    resize: none;
+}
+
+#plan_trip .form .form_right form .full input[type=submit] {
+    width: 100%;
+    background-color: var(--green);
+    color: white;
+    padding: 11px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+/* --------------------------------------------------------------- */
+
+/* -------------------------Footer--------------------------------- */
+
+.footer {
+    padding: 0;
+}
+
+.footer .footer_container {
+    background: url(../Images/footer-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 50vh;
+    padding: 2rem 4%;
+    display: flex;
+    flex-flow: column;
+}
+
+.footer .footer_container .box_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.footer .footer_container .box {
+    display: block;
+}
+
+.footer .footer_container .box_container .box h3 {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    color: var(--white);
+}
+
+.footer .footer_container .box_container .box a {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+.footer .footer_container .box_container .box a :hover {
+    padding-right: 2rem;
+    color: var(--green);
+}
+
+.footer .footer_container .box_container .box a i {
+    color: var(--green);
+    padding-right: .5rem;
+}
+
+.footer .footer_container .box_container .box a i :hover {
+    padding-right: 2rem;
+}
+
+.footer .footer_container .footer_copyright {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+
+
+/* ---------------------------------------Media Queries-------------------------  */
+@media(max-width:1300px) {
+    #plan_trip .form {
+        padding: 17px;
+    }
+
+    #plan_trip .form .form_left h3 {
+        font-size: 31px;
+    }
+
+    #plan_trip .form .form_left .list {
+        padding: 28px 0;
+    }
+
+    #plan_trip .form .form_left .list li {
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+
+    #plan_trip .form .form_left .list li::after {
+        width: 5px;
+        height: 5px;
+    }
+
+    #plan_trip .form .form_left .social_icon {
+        margin-bottom: 30px;
+    }
+
+    #plan_trip .form .form_left .social_icon ul li a i {
+        font-size: 48px;
+        margin-right: 16px;
+    }
+
+    #plan_trip .form .form_left .call_section {
+        padding-top: 20px;
+    }
+
+    #plan_trip .form .form_left .call_section p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #plan_trip .form .form_left .call_section h4 {
+        font-size: 18px;
+        line-height: 16px;
+        padding: 8px 0;
+    }
+
+    #plan_trip .form .form_right h2 {
+        font-size: 31px;
+        line-height: 40px;
+    }
+
+    #plan_trip .form .form_right form {
+        margin-top: 28px;
+    }
+
+    #plan_trip .form .form_right form .full label {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    #plan_trip .form .form_right form .full input[type=text],
+    #plan_trip .form .form_right form .full select,
+    #plan_trip .form .form_right form .full input[type=email],
+    #plan_trip .form .form_right form .full input[type=date],
+    #plan_trip .form .form_right form .full textarea {
+        margin: 7px 0;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    #plan_trip .form .form_right form .full input[type=submit] {
+        margin: 9px 0;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media(max-width:1200px) {
+    .header {
+        padding: 2rem;
+    }
+
+    #plan_trip .main_form {
+        width: 70%;
+        left: 13%;
+        top: 8px;
+    }
+
+    .header .icons #login_user {
+        margin-left: 2rem;
+    }
+
+    .header .icons .dropdown .dropdown_content {
+        margin-left: -75px;
+    }
+
+    #signup .signup_form,
+    #login_model .login_form {
+        width: 33%;
+    }
+}
+
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    #plan_trip .main_form {
+        width: 78%;
+        left: 11%;
+        top: 8px;
+    }
+
+    #signup .signup_form,
+    #login_model .login_form {
+        width: 42%;
+    }
+
+    .swal-modal {
+        width: 416px;
+    }
+}
+
+@media(max-width:768px) {
+    .header .icons #menu_btn {
+        display: inline-block;
+    }
+
+    .fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header .navbar {
+        display: block;
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+
+    #search_btn button {
+        font-size: 2rem;
+    }
+
+    #plan_trip .main_form {
+        width: 85%;
+        left: 9%;
+        top: 8px;
+    }
+
+    #plan_trip .form .form_left h3 {
+        font-size: 28px;
+    }
+
+    #plan_trip .form .form_left .list {
+        padding: 24px 0;
+    }
+
+    #plan_trip .form .form_right h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    #plan_trip .form .form_right form {
+        margin-top: 24px;
+    }
+
+    #signup .signup_form,
+    #login_model .login_form {
+        width: 47%;
+    }
+}
+
+@media(max-width:672px) {
+    #plan_trip .main_form {
+        width: 92%;
+        left: 4%;
+        top: 7px;
+    }
+
+    #plan_trip .form .form_left {
+        display: none;
+    }
+
+    #plan_trip .form .form_right {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    #signup .signup_form,
+    #login_model .login_form {
+        width: 53%;
+    }
+
+    .swal-modal {
+        width: 372px;
+    }
+
+    .swal-icon {
+        width: 78px;
+        height: 66px;
+        margin: 14px auto;
+    }
+
+    .swal-footer {
+        padding: 6px 16px;
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .footer .footer_container {
+        flex-wrap: wrap;
+    }
+
+    .footer .footer_container .box_container {
+        display: block;
+        padding-left: 4rem;
+    }
+
+    #search_btn button {
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        right: 0;
+        border-radius: 0;
+    }
+
+    #plan_trip .main_form {
+        width: 94%;
+        left: 8px;
+        top: 7px;
+    }
+
+    .header .icons .dropdown .dropdown_content {
+        margin-left: -60px;
+    }
+
+    #signup .signup_form,
+    #login_model .login_form {
+        width: 80%;
+    }
+}
